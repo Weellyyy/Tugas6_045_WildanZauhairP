@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praktikum PDW - King Europe</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #74ebd5, #acb6e5);
+      color: #333;
+    }
+
+    .header {
+      position: relative;
+      background-image: url('kingucl.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 80px 20px;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
+
+    /* Layer blur */
+    .header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(8px);
+      background-color: rgba(0, 0, 0, 0.4); /* tambah layer gelap biar teks makin jelas */
+      z-index: 1;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .header h1, .header h2, .header h3 {
+      margin: 20px 0;
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      border: 2px solid #fff;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .header h1:hover, .header h2:hover, .header h3:hover {
+      background: rgba(255, 255, 255, 0.8);
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    .media {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .media img, .media video {
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+
+    .media img:hover, .media video:hover {
+      transform: scale(1.05);
+    }
+
+    audio {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-content">
+      <h1 id="foto">King Europe yang asli UCL-nya 15</h1>
+
+      <div class="media">
+        <img src="piala.jpg" alt="Piala Champion" width="200px">
+
+        <h2 id="video">HIBURAN UNTUK DECUL</h2>
+        <video src="Download.mp4" width="400px" autoplay controls muted></video>
+
+        <h3 id="audio">DENGERIN YA DEK</h3>
+        <audio controls src="sounddd.mp3"></audio>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
